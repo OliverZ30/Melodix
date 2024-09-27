@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "es6"
+  },
+  "include": [
+    "*.js",
+    "**/*.js",
+    "c:\\Users\\OLIVER\\.vscode\\extensions\\samplavigne.p5-vscode-1.2.16\\p5types\\global.d.ts"
+  ],
+  "deploy": {
+      "targets": [
+          {
+              "type": "ftp", "name": "FTP",
+              "host": "waws-prod-sn1-053.ftp.azurewebsites.windows.net",
+              "user": "melodix\\$melodix",
+              "password": "sOmeCrYPTicL00kIngStr1nG",
+              "dir": "/site/wwwroot"
+          }
+      ]
+  }
+}
