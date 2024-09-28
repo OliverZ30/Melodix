@@ -524,6 +524,12 @@ function draw() {
 function setup() {
   frameRate(10000);
   createCanvas(windowWidth, windowHeight, WEBGL);
+  graphics = createGraphics(windowWidth, windowHeight);
+  W = windowWidth;
+  H = windowHeight;
+  C = H / R;
+  IC = W / IR;
+  resizeCanvas(windowWidth, windowHeight);
   graphics = createGraphics(width, height);
   W = windowWidth;
   H = windowHeight;
