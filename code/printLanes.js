@@ -1,3 +1,5 @@
+var stretch_4kLanes = 1.0;
+
 function printLanes() {
 
   let Rc = bgColor[floor(chart_num / 2)][0];
@@ -38,16 +40,16 @@ function printLanes() {
   graphics.rect(0, 0, 200 * C, 400 * C); //frame
 
   graphics.stroke(255, 255, 255, 50);
-  if (!fourkey) {
+  if (!fourkey[chart_num]) {
     graphics.line(100 * C / 3, -200 * C, 100 * C / 3, 150 * C);
     graphics.line(-100 * C / 3, -200 * C, -100 * C / 3, 150 * C);
     graphics.line(0, -200 * C, 0, 150 * C);
     graphics.line(200 * C / 3, -200 * C, 200 * C / 3, 150 * C);
     graphics.line(-200 * C / 3, -200 * C, -200 * C / 3, 150 * C); //6K lanes
   } else {
-    graphics.line(-50 * C, -200 * C, -50 * C, 150 * C);
+    graphics.line(-50 * C * stretch_4kLanes, -200 * C, -50 * C * stretch_4kLanes, 150 * C);
     graphics.line(0, -200 * C, 0, 150 * C);
-    graphics.line(50 * C, -200 * C, 50 * C, 150 * C); //4K lanes
+    graphics.line(50 * C * stretch_4kLanes, -200 * C, 50 * C * stretch_4kLanes, 150 * C); //4K lanes
   }
 
 
@@ -62,10 +64,10 @@ function printLanes() {
     graphics.text("K", C * 100 / 3 + C * 100 / 6, 0);
     graphics.text("L", C * 200 / 3 + C * 100 / 6, 0); //6K keybind indication
   } else {
-    graphics.text("D", -C * 75, 0);
-    graphics.text("F", -C * 25, 0);
-    graphics.text("J", C * 25, 0);
-    graphics.text("K", C * 75, 0); //4K keybind indication
+    graphics.text("D", -C * 75 * stretch_4kLanes, 0);
+    graphics.text("F", -C * 25 * stretch_4kLanes, 0);
+    graphics.text("J", C * 25 * stretch_4kLanes, 0);
+    graphics.text("K", C * 75 * stretch_4kLanes, 0); //4K keybind indication
   }
 
   let ratio = (chart_time / 1000 - songoffset[floor(chart_num / 2)]) / (music[floor(chart_num / 2)].duration() - songoffset[floor(chart_num / 2)]);
