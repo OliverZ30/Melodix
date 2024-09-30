@@ -32,7 +32,7 @@ function printEffects() {
       graphics.rectMode(CORNER);
       graphics.noStroke();
       if (!fourkey[chart_num]) graphics.rect(-C * 100 + C * 100 / 3 * (chart[chart_num][i][2] - 1), C * 100, C * 100 / 3, C * 50);
-      else graphics.rect(-C * 150 + C * 50 * (chart[chart_num][i][2] - 1), C * 50, C * 50, C * 100);
+      else graphics.rect(-C * 150 * stretch_4kLanes + C * 50 * stretch_4kLanes * (chart[chart_num][i][2] - 1), C * 50, C * 50 * stretch_4kLanes, C * 100);
     }
   }
 }
