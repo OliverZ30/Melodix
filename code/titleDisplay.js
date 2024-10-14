@@ -1,4 +1,4 @@
-var version = "Beta 0.10"
+var version = "Beta 0.10.2"
 function titleDisplay() {
   graphics.push();
   graphics.textFont(fontTitle);
@@ -91,6 +91,8 @@ Beta 0.9 - Mouse controls
 ---
 
 Beta 0.10 - SHADERS + Hidden level World_Collapse
+Beta 0.10.1 - World_Collapse effects
+Beta 0.10.2 - Alignment fix
 
 */
 
