@@ -18,9 +18,9 @@ function startDisplay() {
       graphics.push();
       graphics.noStroke();
       graphics.textSize(30 * C);
-      graphics.textAlign(CENTER, CENTER);
+      graphics.textAlign(CENTER);
       graphics.fill(255, T);
-      graphics.text("Click anywhere to start", 0, 0);
+      graphics.text("Click anywhere to start", 0, 20 * C);
       graphics.pop();
     } else {
       game_position = "intro";
@@ -29,7 +29,7 @@ function startDisplay() {
     graphics.push();
     graphics.noStroke();
     graphics.textSize(30 * C);
-    graphics.textAlign(CENTER, CENTER);
+    graphics.textAlign(CENTER);
     let T;
     if (start_timer < 60) {
       T = 200 - start_timer * 125 / 60;
@@ -37,7 +37,7 @@ function startDisplay() {
       T = 200 - (120 - start_timer) * 125 / 60;
     }
     graphics.fill(255, T);
-    graphics.text("Click anywhere to start", 0, 0);
+    graphics.text("Click anywhere to start", 0, 20 * C);
     graphics.pop();
   }
 }

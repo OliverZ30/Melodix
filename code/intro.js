@@ -33,11 +33,11 @@ function introDisplay() {
   graphics.noStroke();
   graphics.fill(255, T);
   graphics.textSize(40 * C);
-  graphics.textAlign(CENTER, CENTER);
-  graphics.text("OZ Presents...", C * 5, -C * 15);
+  graphics.textAlign(CENTER);
+  graphics.text("OZ Presents...", C * 5, -C * 0);
   graphics.textSize(12 * C);
   graphics.fill(175, T);
-  graphics.text("(Headphones & Fullscreen Recommended)", C * 5, C * 30);
+  graphics.text("(Headphones & Fullscreen Recommended)", C * 5, C * 35);
   pop();
 }
 

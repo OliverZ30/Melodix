@@ -119,7 +119,7 @@ function draw() {
   shader(rgbShiftShader);
   
   graphics.background(10);
-  graphics.translate(W / 2,H / 2);
+  graphics.translate(W / 2, H / 2);
   graphics.textAlign(CENTER);
   graphics.textFont(fontRegular);
   
@@ -735,12 +735,12 @@ function preload() {
   //   tap[i]=loadSound('misc/tap.mp3');
   // }
 
-  if (windowWidth >= 500) {
-    resizeCanvas(windowWidth, windowHeight);
-    W = windowWidth;
-    H = windowHeight;
-    C = H / R;
-  }
+//   if (windowWidth >= 500) {
+//     resizeCanvas(windowWidth, windowHeight);
+//     W = windowWidth;
+//     H = windowHeight;
+//     C = H / R;
+//   }
 }
 
 function windowResized() {
