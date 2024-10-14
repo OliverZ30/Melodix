@@ -109,13 +109,16 @@ Beta 0.10.2 - Alignment fix
 Next Steps:
 
 Charts:
+World_Collapse (EZ)
+Concvssion (EZ)
 DataError (EZ)
 Waterfall (EZ)
-Andrew's music (1.1)
 
 Features:
+Andrew's music (1.1)
 Background image / animation (1.2)
 Collections (1.1 / 1.2)
+Level sorting (1.1 / 1.2)
 One-time data storage codes (later, low priority)
 
 Possible Improvements:
