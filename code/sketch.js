@@ -30,7 +30,7 @@ var musicbegin = false;
 var C;
 var hardmode = false;
 
-var game_position = "start";
+var game_position = "level_select";
 var transitionTimer = -1;
 var transitionTime = 20;
 var inTransition = false;

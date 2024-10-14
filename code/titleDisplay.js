@@ -1,4 +1,4 @@
-var version = "1.0.2"
+var version = "Beta 0.10"
 function titleDisplay() {
   graphics.push();
   graphics.textFont(fontTitle);
@@ -79,6 +79,19 @@ Beta 0.7.2 - New Level *Tiny Fate (5/9)*
 Beta 0.7.3 - Hidden Level *Avantgarde (7/12)*
 Beta 0.7.4 - New Level *Abatement (5/10)*
 
+---
+
+Beta 0.8 - Endscreen adjustments, pause indicator
+Beta 0.8.1 - More endscreen adjustments
+
+---
+
+Beta 0.9 - Mouse controls
+
+---
+
+Beta 0.10 - SHADERS + Hidden level World_Collapse
+
 */
 
 // ===
@@ -87,10 +100,6 @@ Beta 0.7.4 - New Level *Abatement (5/10)*
 
 /*
 
-1.0 - Endscreen adjustments, pause indicator
-1.0.1 - More endscreen adjustments
-1.0.2 - Mouse controls
-
 */
 
 /*
@@ -98,7 +107,7 @@ Beta 0.7.4 - New Level *Abatement (5/10)*
 Next Steps:
 
 Charts:
-DataError (EZ/HD)
+DataError (EZ)
 Waterfall (EZ)
 Andrew's music (1.1)
 
