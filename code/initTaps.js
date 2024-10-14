@@ -37,7 +37,7 @@ function initTaps() {
       }
     } else if (fourkey[chart_num] == true && auto == false && i >= 1 && i <= 4) {
       if (laneTransp[i] > 0) {
-        graphics.rect(-C * 150 + C * 50 * i, -C * 200, C * 50, C * 350);
+        graphics.rect(-C * 150 * stretch_4kLanes + C * 50 * stretch_4kLanes * i, -C * 200, C * 50 * stretch_4kLanes, C * 350);
       }
     }
   }

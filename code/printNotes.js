@@ -26,7 +26,7 @@ function printNotes() {
       graphics.noStroke();
       graphics.rectMode(CORNER);
       if (fourkey[chart_num] == false) graphics.rect(-C * 100 + C * 100 / 3 * (chart[chart_num][i][2] - 1), py[i] - noteWidth, C * 100 / 3, 2 * noteWidth);
-      else graphics.rect(-C * 150 + C * 50 * (chart[chart_num][i][2] - 1), py[i] - 1.5 * noteWidth, C * 50, 3 * noteWidth);
+      else graphics.rect(-C * 150 * stretch_4kLanes + C * 50 * stretch_4kLanes * (chart[chart_num][i][2] - 1), py[i] - 1.5 * noteWidth, C * 50 * stretch_4kLanes, 3 * noteWidth);
     }
     let Sp = speed;
     if (chart_num == 0) {
@@ -80,7 +80,7 @@ function printNotes() {
       holdendY -= calcYpos(chart_time, holdendtime, noteid, Sp);
 
       if (!fourkey[chart_num]) graphics.rect(-C * 100 + C * 100 / 3 * (chart[chart_num][i][2] - 1), min(C * 150, max(-C * 200, holdendY)), -C * 100 + C * 100 / 3 * (chart[chart_num][i][2]), min(C * 150, py[i]));
-      else graphics.rect(-C * 150 + C * 50 * (chart[chart_num][i][2] - 1), min(C * 150, max(-C * 200, holdendY)), -C * 150 + C * 50 * (chart[chart_num][i][2]), min(C * 150, py[i]));
+      else graphics.rect(-C * 150 * stretch_4kLanes + C * 50 * stretch_4kLanes * (chart[chart_num][i][2] - 1), min(C * 150, max(-C * 200, holdendY)), -C * 150 * stretch_4kLanes + C * 50 * stretch_4kLanes * (chart[chart_num][i][2]), min(C * 150, py[i]));
     }
   }
 }

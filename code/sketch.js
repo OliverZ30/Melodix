@@ -136,6 +136,21 @@ function draw() {
       game_position = "endscreen_avantBGA";
       WorldCollapseFirstplay = false;
     }
+    if (music[floor(WorldCollapseIndex / 2)].currentTime() >= 90.81) {
+      stretch_4kLanes = (95.13 - music[floor(WorldCollapseIndex / 2)].currentTime()) / 4.32 * (1 / 3) + (2 / 3);
+    }
+    if (music[floor(WorldCollapseIndex / 2)].currentTime() >= 95.13) {
+      fourkey[WorldCollapseIndex] = fourkey[WorldCollapseIndex + 1] = false;
+    }
+    chart[WorldCollapseIndex] = worldCollapse6kChart[0];
+    chart[WorldCollapseIndex + 1] = worldCollapse6kChart[1];
+    total_notes[WorldCollapseIndex] = worldCollapse6kEZNotes;
+    total_notes[WorldCollapseIndex + 1] = worldCollapse6kHDNotes;
+  } else {
+    chart[WorldCollapseIndex] = worldCollapse4kChart[0];
+    chart[WorldCollapseIndex + 1] = worldCollapse4kChart[1];
+    total_notes[WorldCollapseIndex] = worldCollapse4kEZNotes;
+    total_notes[WorldCollapseIndex + 1] = worldCollapse4kHDNotes;
   }
   
   for (let i = 0; i < intensity.length - 1; i ++) {
@@ -419,6 +434,7 @@ function draw() {
     }
     if (transitionTimer >= 2 * transitionTime) {
       game_position = "level_select";
+      fourkey[WorldCollapseIndex] = fourkey[WorldCollapseIndex + 1] = true;
       if (avant_firstplay == true) {
         game_position = "start";
       }
@@ -640,6 +656,9 @@ function setup() {
       }
     }
   }
+
+  worldCollapse4kChart[0] = chart[WorldCollapseIndex];
+  worldCollapse4kChart[1] = chart[WorldCollapseIndex + 1];
 
   fft = new p5.FFT();
   introfft = new p5.FFT();
