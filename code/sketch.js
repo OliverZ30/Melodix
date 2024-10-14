@@ -277,6 +277,9 @@ function draw() {
     }
   }
   else if (game_position == "endscreen_WorldCollapse") {
+    if (auto == true) {
+      auto = false;
+    }
     WorldCollapseFirstplay = true;
     WorldCollapseUnlocked = true;
     if (transitionTimer == -1) transitionTimer = 0;
