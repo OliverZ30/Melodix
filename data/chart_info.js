@@ -15,7 +15,7 @@ var title = [
   "Unfinished", "DataError", //8
   "Final Step!", "Final Step!", //9
   "聖夜讃歌", "聖夜讃歌", //10
-  "Unfinished", "Concvssion", //11
+  "Concvssion", "Concvssion", //11
   "Tiny Fate", "Tiny Fate", //12
   "Abatement", "Abatement", //13
   "Nhelv", "Nhelv", //14
