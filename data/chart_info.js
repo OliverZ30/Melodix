@@ -21,7 +21,7 @@ var title = [
   "Nhelv", "Nhelv", //14
   "无人区", "无人区", //15
   "Fractured Angel", "Fractured Angel", //16
-  "Unfinished", "World_Collapse", //17
+  "World_Collapse", "World_Collapse", //17
   "Avantgarde", "Avantgarde" //18
 ];
 
