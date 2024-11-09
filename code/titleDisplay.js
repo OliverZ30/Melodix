@@ -113,8 +113,6 @@ Beta 0.11.1 - Alignment fix
 Next Steps:
 
 Charts:
-World_Collapse (EZ)
-Concvssion (EZ)
 DataError (EZ)
 Waterfall (EZ)
 
