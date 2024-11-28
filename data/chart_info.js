@@ -171,7 +171,7 @@ var offset = [
   19, 19,
 
   //Concvssion
-  11.7, 11.7,
+  11.9, 11.9,
 
   //Tiny Fate
   12.6, 12.6,
