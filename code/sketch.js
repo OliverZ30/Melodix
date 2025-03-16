@@ -725,8 +725,9 @@ function preload() {
   img[14] = loadImage('images/Nhelv.jpg');
   img[15] = loadImage('images/Vacuum.jpg');
   img[16] = loadImage('images/FracturedAngel.jpg');
-  img[17] = loadImage('images/WorldCollapse.jpg');
-  img[18] = loadImage('images/Avantgarde.jpg');
+  img[17] = loadImage('images/WorldofScarlet.jpg');
+  img[18] = loadImage('images/WorldCollapse.jpg');
+  img[19] = loadImage('images/Avantgarde.jpg');
 
   beat = loadSound('misc/beat.mp3');
   beep = loadSound('misc/beep.mp3');
