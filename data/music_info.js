@@ -16,6 +16,7 @@ var songname = [
   "Nhelv",
   "Vacuum",
   "FracturedAngel",
+  "WorldofScarlet",
   "WorldCollapse",
   "Avantgarde"
 ]
@@ -60,11 +61,13 @@ var menuoffset = [
   107,
   38,
   66.2,
+  22,
   98.6,
   116
 ]
 
 var menuduration = [
+  15,
   15,
   15,
   15,
@@ -104,11 +107,13 @@ var bpm = [
   174.59, 174.59,
   203, 203,
   150.5, 150.5,
+  210, 210,
   166.5, 166.5,
   200, 200
 ];
 
 var beats = [
+  4, 4,
   4, 4,
   4, 4,
   4, 4,

@@ -1,7 +1,7 @@
 var isHidden = [];
 var avant_req = [14, 15, 16];
-var WorldCollapseIndex = 34;
-var avantindex = 36;
+var WorldCollapseIndex = 36;
+var avantindex = 38;
 
 var title = [
   "Tutorial", "Rain", //0
@@ -21,8 +21,9 @@ var title = [
   "Nhelv", "Nhelv", //14
   "无人区", "无人区", //15
   "Fractured Angel", "Fractured Angel", //16
-  "World_Collapse", "World_Collapse", //17
-  "Avantgarde", "Avantgarde" //18
+  "World of Scarlet", "World of Scarlet", //17
+  "World_Collapse", "World_Collapse", //18
+  "Avantgarde", "Avantgarde" //19
 ];
 
 var datapos = [
@@ -43,6 +44,7 @@ var datapos = [
   10, 11,
   16, 17,
   22, 23,
+  38, 39,
   36, 37,
   24, 25,
 ]
@@ -65,6 +67,7 @@ var artist = [
   "Silentroom", "Silentroom",
   "NoKANY", "NoKANY",
   "DJ Raisei", "DJ Raisei",
+  "OfficialAz3", "OfficialAz3",
   "EndCat", "EndCat",
   "Raimukun", "Raimukun"
 ]
@@ -87,6 +90,7 @@ var bgColor = [
   [230, 120, 120],
   [120, 120, 230],
   [230, 160, 140],
+  [255, 100, 100],
   [160, 200, 190],
   [150, 150, 150]
 ]
@@ -110,6 +114,7 @@ var specialTitle = [
   true, true,
   false, false,
   false, false,
+  false, false,
   false, false
 ]
 
@@ -129,10 +134,11 @@ var difficulty = [
   5, 9,
   5, 10,
   6, 10,
-  6, 11,
+  6, 10,
   6, 11,
   7, 11,
-  7, 12
+  7, 11,
+  7, 11
 ];
 
 var offset = [
@@ -188,6 +194,9 @@ var offset = [
   //Fractured Angel
   9, 9,
 
+  //World of Scarlet
+  11, 11,
+
   //World_Collapse
   11, 11,
 
@@ -196,6 +205,7 @@ var offset = [
 ];
 
 var fourkey = [
+  true, true,
   true, true,
   true, true,
   true, true,

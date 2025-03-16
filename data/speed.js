@@ -583,6 +583,20 @@ var speedCheckpoints = [
         [0, 0, 1]
       ]
     },
+  ], //World of Scarlet EZ
+  [
+    {
+      checkpoint: [
+        [0, 0, 1]
+      ]
+    },
+  ], //World of Scarlet HD
+  [
+    {
+      checkpoint: [
+        [0, 0, 1]
+      ]
+    },
   ], //World Collapse EZ
   [
     {
