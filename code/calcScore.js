@@ -65,16 +65,21 @@ function calcScore() {
   graphics.fill(255);
   graphics.strokeWeight(2 * C);
   graphics.textSize(20 * C);
+
+  let Rc = bgColor[floor(chart_num / 2)][0];
+  let Gc = bgColor[floor(chart_num / 2)][1];
+  let Bc = bgColor[floor(chart_num / 2)][2];
+
   if (!auto) graphics.text(score, 0, C * 180);
   if (ap < 0) graphics.fill(255, 255, 255, 200);
   else graphics.fill(255, 255, 255, 100);
   if (combo >= 3) {
     if (ap == 1) {
       graphics.strokeWeight(3 * C);
-      graphics.stroke(200, 150, 200, 150);
+      graphics.stroke(Rc, Gc, Bc, 150);
     } else if (ap == 0) {
       graphics.strokeWeight(3 * C);
-      graphics.stroke(200, 200, 150, 150);
+      graphics.stroke(255, 255, 255, 150);
     } else {
       graphics.noStroke();
     }

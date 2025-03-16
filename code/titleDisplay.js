@@ -1,4 +1,4 @@
-var version = "Beta 0.11.1"
+var version = "Beta 0.11.2"
 function titleDisplay() {
   graphics.push();
   graphics.textFont(fontTitle);
@@ -97,6 +97,7 @@ Beta 0.10.1 - World_Collapse effects
 
 Beta 0.11 - Officially transferred code to Github
 Beta 0.11.1 - Alignment fix
+Beta 0.11.2 - New Level *World of Scarlet (6/11)*
 
 */
 
@@ -112,16 +113,18 @@ Beta 0.11.1 - Alignment fix
 
 Next Steps:
 
-Charts:
+Charts (before 1.0):
 DataError (EZ)
 Waterfall (EZ)
+World of Scarlet (EZ)
 
 Features:
 Andrew's music (1.1)
+Title screen effects (1.1)
 Background image / animation (1.2)
 Collections (1.1 / 1.2)
 Level sorting (1.1 / 1.2)
-One-time data storage codes (later, low priority)
+One-time data storage codes (1.2)
 
 Possible Improvements:
 none yet
