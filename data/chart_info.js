@@ -195,7 +195,7 @@ var offset = [
   9, 9,
 
   //World of Scarlet
-  11, 11,
+  10, 10,
 
   //World_Collapse
   11, 11,
