@@ -60,14 +60,16 @@ function keyPressed() {
         lslFrame = 0;
       }
     }
-    if (keyCode == ENTER && loaded[floor(level_index / 2)]) {
-      if (!(WorldCollapseUnlocked == false && (level_index == WorldCollapseIndex || level_index == WorldCollapseIndex + 1))) {
-        music[floor(level_index / 2)].setVolume(0, 0.4, 0);
-        playinglvl = -2;
-        chart_num = level_index;
-        game_position = "levelselect_level";
-        inTransition = true;
-        init();
+    if (loaded[floor(level_index / 2)]) {
+      if (keyCode == ENTER) {
+        if (!(WorldCollapseUnlocked == false && (level_index == WorldCollapseIndex || level_index == WorldCollapseIndex + 1))) {
+          music[floor(level_index / 2)].setVolume(0, 0.4, 0);
+          playinglvl = -2;
+          chart_num = level_index;
+          game_position = "levelselect_level";
+          inTransition = true;
+          init();
+        }
       }
     }
     if (keyCode == 32) {

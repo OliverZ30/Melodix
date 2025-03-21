@@ -264,6 +264,9 @@ function levelSelect() {
     if (page * 10 + i < total_charts && isHidden[page * 10 + i] != true) {
       let frameCenterX = 0 + hshift;
       let frameCenterY = -C * 150 + C * floor(i / 2) * 75;
+      if (mousex > frameCenterX - C * 150 && mousex < frameCenterX + C * 150 && mousey > frameCenterY - C * 25 && mousey < frameCenterY + C * 25) {
+        mousepos = i;
+      }
       if (level_index == page * 10 + i) {
         if (difficulty[page * 10 + i] <= 3) {
           graphics.fill(170, 230, 170, 50);
@@ -282,8 +285,7 @@ function levelSelect() {
           graphics.fill(50);
           graphics.stroke(150);
         }
-      } else if (mousex > frameCenterX - C * 150 && mousex < frameCenterX + C * 150 && mousey > frameCenterY - C * 25 && mousey < frameCenterY + C * 25) {
-        mousepos = i;
+      } else if (mousepos == i) {
         if (difficulty[page * 10 + i] <= 3) {
           graphics.fill(170, 230, 170, 20);
           graphics.stroke(170, 230, 170);
@@ -504,7 +506,8 @@ function levelSelect() {
     }
   }
 
-  if (mousepos != -1 && mouseIsPressed && page * 10 + mousepos != level_index) {
+  if (mousepos != -1 && mousejustpressed == 1 && page * 10 + mousepos != level_index) {
+    mousejustpressed = 0;
     if (loaded[floor(level_index / 2)]) music[floor(level_index / 2)].setVolume(0, 0.4, 0);
     playinglvl = -1;
     lslFrame = 0;
@@ -512,6 +515,7 @@ function levelSelect() {
   }
 
   if (rightarrowhover == true && mousejustpressed == 1) {
+    mousejustpressed = 0;
     if (level_index + 10 < total_charts && isHidden[level_index + 10] != true) {
       if (loaded[floor(level_index / 2)]) music[floor(level_index / 2)].setVolume(0, 0.4, 0);
       playinglvl = -1;
@@ -535,6 +539,7 @@ function levelSelect() {
   }
 
   if (leftarrowhover == true && mousejustpressed == 1) {
+    mousejustpressed = 0;
     if (page > 0) {
       if (loaded[floor(level_index / 2)]) music[floor(level_index / 2)].setVolume(0, 0.4, 0);
       playinglvl = -1;
@@ -545,6 +550,7 @@ function levelSelect() {
   }
 
   if (settingshover == true && mousejustpressed == 1) {
+    mousejustpressed = 0;
     if (loaded[floor(level_index / 2)]) music[playinglvl].setVolume(0, 0.4, 0);
     playinglvl = -2;
     custom_offset = getItem('custom_offset');
@@ -552,13 +558,38 @@ function levelSelect() {
     game_position = "levelselect_settings";
   }
 
+  push();
+  textFont(fontRegular);
+  textSize(20 * C);
+  stroke(255);
+  fill(255);
+  text(mousepos, 0, 0);
+  text(level_index, 0, 50);
+  pop();
+
+  if (loaded[floor(level_index / 2)]) {
+    if (level_index == page * 10 + mousepos && mousejustpressed == 1) {
+      mousejustpressed = 0;
+      if (!(WorldCollapseUnlocked == false && (level_index == WorldCollapseIndex || level_index == WorldCollapseIndex + 1))) {
+        music[floor(level_index / 2)].setVolume(0, 0.4, 0);
+        playinglvl = -2;
+        chart_num = level_index;
+        game_position = "levelselect_level";
+        inTransition = true;
+        init();
+      }
+    }
+  }
+
   if (difficultyhover == true && mousejustpressed == 1) {
+    mousejustpressed = 0;
     if (hardmode) level_index--;
     else level_index++;
     hardmode = !hardmode;
   }
 
   if (autohover == true && mousejustpressed == 1) {
+    mousejustpressed = 0;
     auto = !auto;
   }
 }
