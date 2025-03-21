@@ -8,6 +8,9 @@ var pausetimer = -1;
 var keyisdown = -1;
 
 var pausehover = false;
+var pause_continuehover = false;
+var pause_exithover = false;
+var pause_restarthover = false;
 
 function pausescreen() {
 
@@ -16,6 +19,9 @@ function pausescreen() {
   mousex = mouseX - W / 2;
   mousey = mouseY - H / 2;
   pausehover = false;
+  pause_continuehover = false;
+  pause_exithover = false;
+  pause_restarthover = false;
 
   if (mouseIsPressed) {
     if (mousejustpressed == -1) {
@@ -24,7 +30,7 @@ function pausescreen() {
       mousejustpressed = 0;
     }
   } else mousejustpressed = -1;
-  
+
   if (!inTransition) {
     if (keyIsDown(ESCAPE) && keyisdown != 1 && keyisdown != 2) {
       if (ESC == -1) { ESC = 1; keyisdown = 0; }
@@ -72,9 +78,21 @@ function pausescreen() {
         game_position = "pausescreen_levelselect";
       }
     }
+    if (abs(mousex - (-W / 5)) <= H / 14 && abs(mousey) <= H / 14 && mousejustpressed == 1) {
+      if (musicplaying == false) {
+        music[floor(chart_num / 2)].stop();
+        game_position = "pausescreen_levelselect";
+      }
+    }
 
     if (r_key >= 0 && pausetimer == -1) {
       if (musicplaying == false && space == 1) {
+        music[floor(chart_num / 2)].stop();
+        game_position = "pausescreen_level";
+      }
+    }
+    if (abs(mousex) <= H / 14 && abs(mousey) <= H / 14 && mousejustpressed == 1) {
+      if (musicplaying == false) {
         music[floor(chart_num / 2)].stop();
         game_position = "pausescreen_level";
       }
@@ -83,6 +101,11 @@ function pausescreen() {
 
   if (enterkey >= 0 && musicplaying == false) {
     if (space == 1 && pausetimer == -1) {
+      pausetimer = 0;
+    }
+  }
+  if (abs(mousex - (W / 5)) <= H / 14 && abs(mousey) <= H / 14 && mousejustpressed == 1) {
+    if (musicplaying == false && pausetimer == -1) {
       pausetimer = 0;
     }
   }
@@ -95,10 +118,19 @@ function pausescreen() {
     graphics.rotate(0);
     graphics.rectMode(CENTER);
     graphics.noStroke();
-    graphics.fill(0, 0, 0, 192);
+    graphics.fill(0, 0, 0, 210);
     graphics.rect(0, 0, 2 * W, 2 * H);
     //shade
 
+    if (ESC >= 0 || (abs(mousex - (-W / 5)) <= H / 14 && abs(mousey) <= H / 14)) {
+      pause_exithover = true;
+      push();
+      graphics.noFill();
+      graphics.strokeWeight(4 * C);
+      graphics.stroke(255, 255, 255, 128);
+      graphics.rect(-W / 5, 0, H / 7, H / 7);
+      pop();
+    }
     graphics.fill(255);
     graphics.noStroke();
     graphics.rectMode(CORNERS);
@@ -106,6 +138,16 @@ function pausescreen() {
     graphics.triangle(-W / 5 - 15 * C, 7 * C, -W / 5 - 15 * C, -7 * C, -W / 5 - 22 * C, 0);
     //exit
 
+    if (r_key >= 0 || (abs(mousex) <= H / 14 && abs(mousey) <= H / 14)) {
+      pause_restarthover = true;
+      push();
+      graphics.rectMode(CENTER);
+      graphics.noFill();
+      graphics.strokeWeight(4 * C);
+      graphics.stroke(255, 255, 255, 128);
+      graphics.rect(0, 0, H / 7, H / 7);
+      pop();
+    }
     graphics.rectMode(CENTER);
     graphics.noFill();
     graphics.strokeWeight(4 * C);
@@ -116,22 +158,19 @@ function pausescreen() {
     graphics.triangle(0, -H / 20 + 7 * C, 0, -H / 20 - 7 * C, 0 + 10 * C, -H / 20);
     //restart
 
+    if (enterkey >= 0 || (abs(mousex - (W / 5)) <= H / 14 && abs(mousey) <= H / 14)) {
+      pause_continuehover = true;
+      push();
+      graphics.noFill();
+      graphics.strokeWeight(4 * C);
+      graphics.stroke(255, 255, 255, 128);
+      graphics.rect(W / 5, 0, H / 7, H / 7);
+      pop();
+    }
     graphics.noStroke();
     graphics.fill(255);
     graphics.triangle(W / 5 - C * 15, H / 20, W / 5 - C * 15, -H / 20, W / 5 + C * 20, 0);
     //continue
-
-    graphics.noFill();
-    graphics.stroke(255, 255, 255, 128);
-    if (r_key >= 0) {
-      graphics.rect(0, 0, H / 7, H / 7);
-    }
-    if (ESC >= 0) {
-      graphics.rect(-W / 5, 0, H / 7, H / 7);
-    }
-    if (enterkey >= 0) {
-      graphics.rect(W / 5, 0, H / 7, H / 7);
-    }
 
     graphics.noStroke();
     graphics.fill(255);
@@ -144,6 +183,7 @@ function pausescreen() {
     graphics.text("then press SPACE", 0, H / 10 + 25 * C);
     graphics.text("then press SPACE", W / 5, H / 10 + 25 * C);
   }
+
   if (musicplaying == false && pausetimer >= 0) {
     graphics.rotate(0);
     graphics.rectMode(CENTER);
