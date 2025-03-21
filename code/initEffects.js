@@ -3,8 +3,10 @@ function initEffects() {
     if (tapped[i] != -1 && tapped[i] != -1000 && tapped[i] != -500) {
       if (effect_time[i] == -1) {
         effect_time[i] = 1;
-        // tap[tapnum].play();
-        // tapnum=(tapnum+1)%10;
+        if (auto) {
+          tap = new sfx('misc/tap.mp3', 1)
+          tap.play();
+        }
       } else if (effect_time[i] > 0) {
         effect_time[i] -= 0.03;
       } else {

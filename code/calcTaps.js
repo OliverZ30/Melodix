@@ -1,7 +1,9 @@
 var auto = false;
 var autodelay = 60;
+
 function calcTaps() {
   if (musicplaying) {
+
     for (let i = 0; i < total_notes[chart_num]; i++) {
       let note_time = (chart[chart_num][i][0] * 24 + chart[chart_num][i][1] + offset[chart_num]) * 60 * 1000 / bpm[chart_num] / 24;
       note_time += (custom_offset - auto * autodelay);

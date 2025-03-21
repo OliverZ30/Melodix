@@ -98,7 +98,8 @@ Beta 0.10.1 - World_Collapse effects
 Beta 0.11 - Officially transferred code to Github
 Beta 0.11.1 - Alignment fix
 Beta 0.11.2 - Changed perfect effect color to match lvl background
-Beta 0.11.3 - New Level *World of Scarlet (6/11)*
+Beta 0.11.3 - New Level *DataError (4/8)*
+Beta 0.11.4 - New Level *World of Scarlet (6/11)*
 
 */
 

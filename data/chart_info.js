@@ -12,7 +12,7 @@ var title = [
   "Originally", "Originally", //5
   "Inverted World", "Inverted World", //6
   "R.I.P", "R.I.P", //7
-  "Unfinished", "DataError", //8
+  "DataError", "DataError", //8
   "Final Step!", "Final Step!", //9
   "聖夜讃歌", "聖夜讃歌", //10
   "Concvssion", "Concvssion", //11
@@ -168,7 +168,7 @@ var offset = [
   11, 11,
 
   //DataError
-  11.5, 11.5,
+  12.5, 12.5,
 
   //Final Step
   10.5, 10.5,
