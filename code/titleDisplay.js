@@ -1,4 +1,4 @@
-var version = "Beta 0.11.2"
+var version = "Beta 0.11.3"
 function titleDisplay() {
   graphics.push();
   graphics.textFont(fontTitle);
