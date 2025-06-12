@@ -776,6 +776,7 @@ function transitionRect(num) {
   }
 }
 
+/*
 class sfx { //Credits to Ryan M
   constructor(path, volume) {
     this.volume = volume;
@@ -794,3 +795,4 @@ class sfx { //Credits to Ryan M
   }
 
 }
+*/
